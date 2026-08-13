@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Webinário 22/08, 19h · Renda extra no digital para professores</title>
+<meta name="description" content="Webinário ao vivo para professores: o formato de vídeo e o funil que geram de R$1.000 a R$2.000 a mais por mês, com 2 horas do fim de semana. Sábado, 22/08, às 19h.">
+
+<!-- ===== Open Graph (aparece quando o link é compartilhado) ===== -->
+<meta property="og:title" content="De R$1.000 a R$2.000 a mais por mês, com 2 horas do fim de semana">
+<meta property="og:description" content="Webinário ao vivo dia 22/08, às 19h, para professores. Vagas limitadas.">
+<meta property="og:type" content="website">
+
+<style>
+:root{
+  --bg:#080d14;
+  --bg2:#0e1620;
+  --card:#131d29;
+  --line:#20303f;
+  --txt:#eaf2f8;
+  --mut:#95a9b9;
+  --acc:#22d3a5;
+  --acc2:#7fe8cd;
+  --warn:#ffc46b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--txt);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+.wrap{width:100%;max-width:680px;margin:0 auto;padding:0 22px}
+section{padding:52px 0}
+h1,h2,h3{line-height:1.18;letter-spacing:-.02em}
+.acc{color:var(--acc)}
+
+/* ---------- BARRA FIXA ---------- */
+.topbar{
+  position:sticky;top:0;z-index:50;background:rgba(8,13,20,.92);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+  font-size:13px;text-align:center;padding:10px 16px;color:var(--mut);
+}
+.topbar b{color:var(--txt)}
+
+/* ---------- HERO ---------- */
+.hero{padding:44px 0 40px;background:
+  radial-gradient(900px 420px at 50% -80px, rgba(34,211,165,.16), transparent 70%),
+  linear-gradient(180deg,var(--bg2),var(--bg));}
+.tagline{
+  display:inline-block;border:1px solid rgba(34,211,165,.4);color:var(--acc2);
+  border-radius:100px;padding:6px 14px;font-size:12px;font-weight:700;
+  letter-spacing:1.4px;text-transform:uppercase;margin-bottom:20px;
+}
+h1{font-size:clamp(30px,7.4vw,46px);font-weight:800;margin-bottom:18px}
+.sub{color:#c3d3de;font-size:clamp(16px,4.2vw,18.5px);margin-bottom:26px}
+.sub strong{color:#fff}
+
+/* ---------- DATA / COUNTDOWN ---------- */
+.when{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:18px 20px;margin-bottom:24px;
+}
+.when-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.when-top div{font-size:14px;color:var(--mut)}
+.when-top b{display:block;color:var(--txt);font-size:16px;font-weight:700}
+#cd{display:flex;gap:8px}
+#cd .u{flex:1;background:#0b131c;border:1px solid var(--line);border-radius:10px;padding:9px 4px;text-align:center}
+#cd .n{font-size:22px;font-weight:800;color:var(--acc);font-variant-numeric:tabular-nums}
+#cd .l{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--mut)}
+
+/* ---------- BOTÃO ---------- */
+.cta{
+  display:block;text-align:center;background:var(--acc);color:#04231b;
+  font-weight:800;font-size:17px;padding:18px 20px;border-radius:12px;
+  text-decoration:none;box-shadow:0 10px 30px rgba(34,211,165,.22);
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.cta:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(34,211,165,.3)}
+.cta small{display:block;font-weight:600;font-size:12.5px;opacity:.8;margin-top:3px}
+.under{text-align:center;color:var(--mut);font-size:13px;margin-top:12px}
+
+/* ---------- BLOCOS ---------- */
+.eyebrow{color:var(--acc);font-size:12px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(23px,5.6vw,30px);font-weight:800;margin-bottom:14px}
+p{color:#c3d3de;margin-bottom:14px}
+.divider{height:1px;background:var(--line)}
+
+ul.list{list-style:none}
+ul.list li{position:relative;padding-left:32px;margin-bottom:14px;color:#d3e0e9}
+ul.list li:before{
+  content:"";position:absolute;left:0;top:8px;width:16px;height:16px;border-radius:50%;
+  background:rgba(34,211,165,.15);border:1px solid var(--acc);
+}
+ul.list li:after{content:"";position:absolute;left:5px;top:12px;width:6px;height:6px;border-radius:50%;background:var(--acc)}
+ul.list li b{color:#fff}
+
+.cards{display:grid;gap:12px}
+@media(min-width:620px){.cards{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h3{font-size:16.5px;margin-bottom:6px}
+.card p{font-size:14.5px;color:var(--mut);margin:0}
+.card .ico{font-size:12px;font-weight:800;letter-spacing:1.4px;color:var(--acc);margin-bottom:8px;text-transform:uppercase}
+
+.split{display:grid;gap:12px}
+@media(min-width:620px){.split{grid-template-columns:1fr 1fr}}
+.box{border-radius:14px;padding:20px;border:1px solid var(--line);background:var(--card)}
+.box.yes{border-color:rgba(34,211,165,.45)}
+.box.no{border-color:rgba(255,255,255,.09);opacity:.85}
+.box h3{font-size:16px;margin-bottom:12px}
+.box.yes h3{color:var(--acc)}
+.box ul{list-style:none;font-size:14.5px;color:var(--mut)}
+.box li{padding-left:20px;position:relative;margin-bottom:9px}
+.box.yes li:before{content:"✓";position:absolute;left:0;color:var(--acc);font-weight:800}
+.box.no li:before{content:"×";position:absolute;left:0;color:#6d8091;font-weight:800}
+
+/* ---------- PREÇO ---------- */
+.price{
+  background:linear-gradient(160deg,#12212c,#0c141d);
+  border:1px solid rgba(34,211,165,.4);border-radius:18px;padding:28px 22px;text-align:center;
+}
+.price .num{font-size:52px;font-weight:800;letter-spacing:-.03em;line-height:1;margin:6px 0 4px}
+.price .num span{font-size:22px;font-weight:700;color:var(--mut)}
+.price .why{color:var(--mut);font-size:14.5px;max-width:420px;margin:12px auto 22px}
+
+/* ---------- PASSOS ---------- */
+.steps{counter-reset:s}
+.steps .s{position:relative;padding-left:46px;margin-bottom:20px}
+.steps .s:before{
+  counter-increment:s;content:counter(s);
+  position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;
+  background:var(--acc);color:#04231b;font-weight:800;font-size:15px;
+  display:flex;align-items:center;justify-content:center;
+}
+.steps h3{font-size:16.5px;margin-bottom:3px}
+.steps p{font-size:14.5px;color:var(--mut);margin:0}
+
+/* ---------- FAQ ---------- */
+details{border-bottom:1px solid var(--line);padding:15px 0}
+summary{cursor:pointer;font-weight:700;font-size:15.5px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--acc);font-weight:800;font-size:20px;line-height:1}
+details[open] summary:after{content:"−"}
+details p{margin:10px 0 0;font-size:14.5px;color:var(--mut)}
+
+/* ---------- FINAL ---------- */
+.final{background:linear-gradient(180deg,var(--bg),#0b1620);text-align:center}
+.final h2{margin-bottom:12px}
+.scarce{color:var(--warn);font-size:14px;font-weight:700;margin-bottom:20px}
+
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:#6d8091;font-size:12.5px;text-align:center}
+footer p{color:#6d8091;font-size:12.5px}
+
+/* barra fixa de CTA no mobile */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(8,13,20,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line);display:none}
+.sticky-cta .cta{font-size:15.5px;padding:15px}
+@media(max-width:619px){.sticky-cta{display:block} body{padding-bottom:78px}}
+</style>
+</head>
+<body>
+
+<div class="topbar">Ao vivo · <b>sábado, 22 de agosto, 19h</b> (horário de Brasília)</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <div class="tagline">Webinário ao vivo para professores</div>
+    <h1>De <span class="acc">R$1.000 a R$2.000</span> a mais por mês, com <span class="acc">2 horas</span> do seu fim de semana.</h1>
+    <p class="sub">Sou professor de inglês. Descobri um <strong>formato de vídeo</strong> e um <strong>funil de vendas</strong> que fazem professores venderem no automático — e no dia 22 eu mostro os dois, do começo ao fim.</p>
+    <p class="sub" style="font-size:16px;color:var(--mut)">Eu poderia ter colocado um número absurdo aqui para chamar sua atenção. Preferi o valor que realmente cai na conta.</p>
+
+    <div class="when">
+      <div class="when-top">
+        <div>Quando<b>Sáb, 22/08 · 19h</b></div>
+        <div>Onde<b>Ao vivo, no grupo</b></div>
+        <div>Duração<b>Cerca de 1h30</b></div>
+      </div>
+      <div id="cd">
+        <div class="u"><div class="n" id="d">--</div><div class="l">dias</div></div>
+        <div class="u"><div class="n" id="h">--</div><div class="l">horas</div></div>
+        <div class="u"><div class="n" id="m">--</div><div class="l">min</div></div>
+        <div class="u"><div class="n" id="s">--</div><div class="l">seg</div></div>
+      </div>
+    </div>
+
+    <a class="cta" href="https://pay.kiwify.com.br/hkHDjkN" id="cta1">
+      Garantir minha vaga por R$19,90
+      <small>Pagamento pela Kiwify · acesso imediato ao grupo</small>
+    </a>
+    <p class="under">Vagas limitadas — o grupo fecha antes do início da transmissão.</p>
+  </div>
+</header>
+
+<div class="divider"></div>
+
+<!-- ============ PROBLEMA ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">O problema</div>
+    <h2>Você não vende conhecimento. Você vende hora.</h2>
+    <p>E hora é a única coisa que você não consegue produzir mais. Dobrar o faturamento significa dobrar a agenda: acordar mais cedo, aceitar aula à noite, sacrificar o fim de semana. Até o dia em que não cabe mais ninguém — e o teto aparece.</p>
+    <p>O detalhe é que você já tem o ativo mais caro do mercado: <strong style="color:#fff">um método que funciona e um público que confia em você</strong>. O que falta é uma estrutura que entregue isso sem exigir a sua presença em tempo real.</p>
+    <p>É exatamente essa estrutura que eu vou montar na frente de vocês, do zero, no dia 22.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ MECANISMO ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">O mecanismo</div>
+    <h2>Duas peças. Só isso.</h2>
+    <p>Não é uma lista de 27 estratégias. O que faz o dinheiro entrar sem você estar online são duas coisas trabalhando juntas — e as duas são simples o bastante para você montar num fim de semana.</p>
+    <div class="cards" style="margin-top:22px">
+      <div class="card">
+        <div class="ico">Peça 1</div>
+        <h3>O formato de vídeo</h3>
+        <p>Um jeito específico de gravar conteúdo que atrai justamente quem compra — e não só quem curte. É o mesmo formato do vídeo que te trouxe até aqui.</p>
+      </div>
+      <div class="card">
+        <div class="ico">Peça 2</div>
+        <h3>O funil de vendas</h3>
+        <p>O caminho que a pessoa percorre depois de assistir, até a compra acontecer. Uma vez montado, ele roda sozinho enquanto você dá suas aulas.</p>
+      </div>
+    </div>
+    <p style="margin-top:22px">A rotina depois de pronto: <strong style="color:#fff">cerca de 2 horas no fim de semana</strong> para planejar os conteúdos da semana seguinte. É esse o compromisso real — nem mais, nem menos.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ REALISMO ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Sinceridade</div>
+    <h2>Por que R$1.000 a R$2.000 e não R$50 mil</h2>
+    <p>Você já viu o anúncio prometendo seis dígitos em 30 dias. Eu poderia ter feito o mesmo — provavelmente teria vendido mais vagas com isso.</p>
+    <p>Mas o número que eu mostro é o que apareceu no meu painel nos últimos 30 dias, dando aula normalmente. É um valor que muda o mês de um professor sem exigir que ele abandone a profissão — e, principalmente, <strong style="color:#fff">é um valor que você consegue alcançar</strong>.</p>
+    <p>Se você procura enriquecer rápido, essa aula vai te decepcionar. Se você quer um extra consistente em cima do que já sabe fazer, é exatamente sobre isso que vamos falar.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ O QUE VOCÊ VAI VER ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Nesta aula</div>
+    <h2>O que você vai aprender</h2>
+    <ul class="list">
+      <li><b>O formato de vídeo, destrinchado:</b> a estrutura de um vídeo que faz a pessoa certa parar de rolar o feed — e o que fazer nos primeiros 3 segundos.</li>
+      <li><b>O funil completo, montado ao vivo:</b> cada etapa, do vídeo até o pagamento cair, e por que ele continua vendendo enquanto você dá aula.</li>
+      <li><b>Como transformar o que você já ensina</b> em algo vendável mais de uma vez — sem gravar 40 horas de curso.</li>
+      <li><b>As 2 horas de fim de semana, na prática:</b> exatamente o que planejar nesse tempo para alimentar a semana inteira.</li>
+      <li><b>A conta real do R$1.000 a R$2.000:</b> quantas vendas, a que preço, em quanto tempo — sem promessa mágica.</li>
+      <li><b>Os erros que travam a maioria dos professores</b> nos primeiros 30 dias e como não repetir nenhum deles.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ PARA QUEM ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Antes de entrar</div>
+    <h2>Isso é para você?</h2>
+    <div class="split">
+      <div class="box yes">
+        <h3>É para você se…</h3>
+        <ul>
+          <li>Você dá aulas — idiomas, reforço, música, o que for</li>
+          <li>Sua agenda está cheia, mas o faturamento não acompanha</li>
+          <li>Você tem 2 horas livres no fim de semana para dedicar a isso</li>
+          <li>Você quer uma renda extra que não dependa de mais horas</li>
+          <li>Você topa executar — a aula é prática, não motivacional</li>
+          <li>Você está começando e quer fazer certo desde o início</li>
+        </ul>
+      </div>
+      <div class="box no">
+        <h3>Não é para você se…</h3>
+        <ul>
+          <li>Você procura dinheiro rápido sem trabalho nenhum</li>
+          <li>Não quer aparecer nem se comunicar com a sua base</li>
+          <li>Espera um resultado garantido em 7 dias</li>
+          <li>Não pretende aplicar nada do que for mostrado</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ COMO FUNCIONA ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Como funciona</div>
+    <h2>Do pagamento até a aula</h2>
+    <div class="steps">
+      <div class="s">
+        <h3>Você garante a vaga</h3>
+        <p>Pagamento de R$19,90 pela Kiwify — Pix ou cartão, com confirmação na hora.</p>
+      </div>
+      <div class="s">
+        <h3>Recebe o acesso ao grupo</h3>
+        <p>Logo após a confirmação, chega o link do grupo exclusivo de WhatsApp da turma.</p>
+      </div>
+      <div class="s">
+        <h3>Acompanha os avisos</h3>
+        <p>É pelo grupo que sai o lembrete no dia, o link da transmissão e o material de apoio.</p>
+      </div>
+      <div class="s">
+        <h3>Participa ao vivo em 22/08</h3>
+        <p>Sábado, 19h. Aula prática com espaço para perguntas no final — leve as suas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ PREÇO ============ -->
+<section>
+  <div class="wrap">
+    <div class="price">
+      <div class="eyebrow" style="margin-bottom:4px">Investimento</div>
+      <div class="num"><span>R$</span>19,90</div>
+      <div style="color:var(--mut);font-size:14px">pagamento único · acesso imediato ao grupo</div>
+      <p class="why">O valor existe para filtrar quem realmente vai aparecer. Turma pequena significa que dá para responder as perguntas de quem está lá — e é assim que a aula funciona melhor.</p>
+      <a class="cta" href="https://pay.kiwify.com.br/hkHDjkN" id="cta2">
+        Quero minha vaga
+        <small>Sábado, 22/08 · 19h · vagas limitadas</small>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ============ FAQ ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Dúvidas</div>
+    <h2>Perguntas frequentes</h2>
+
+    <details open>
+      <summary>Vai ter gravação?</summary>
+      <p>O foco é a participação ao vivo, onde dá para tirar dúvidas em tempo real. Qualquer decisão sobre gravação é avisada no grupo — por isso entre e acompanhe os avisos por lá.</p>
+    </details>
+    <details>
+      <summary>Preciso já ter um produto ou uma audiência grande?</summary>
+      <p>Não. A aula é montada justamente para quem está começando do zero e tem uma base pequena. O que você precisa ter é experiência ensinando — isso você já tem.</p>
+    </details>
+    <details>
+      <summary>Sou professor de outra matéria. Serve para mim?</summary>
+      <p>Serve. Os exemplos vão sair do meu dia a dia como professor de inglês, mas o formato de vídeo e o funil são os mesmos para qualquer idioma ou matéria que você ensine.</p>
+    </details>
+    <details>
+      <summary>Quanto tempo por semana isso exige?</summary>
+      <p>A montagem inicial dá trabalho — é honesto dizer isso. Depois de pronta, a manutenção é pequena. Falo dos números reais na aula.</p>
+    </details>
+    <details>
+      <summary>Como recebo o acesso depois de pagar?</summary>
+      <p>A Kiwify libera o acesso na hora da confirmação, com o link do grupo de WhatsApp. Se algo não chegar, é só responder o e-mail da compra.</p>
+    </details>
+    <details>
+      <summary>E se eu não puder assistir no dia?</summary>
+      <p>Entre no grupo mesmo assim: os avisos, o material e as informações da turma ficam todos por lá.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="final">
+  <div class="wrap">
+    <div class="eyebrow">Sábado, 22 de agosto · 19h</div>
+    <h2>Sábado, 19h.<br>Duas horas que mudam o seu mês.</h2>
+    <p style="max-width:480px;margin:0 auto 18px">Em uma noite eu mostro o formato de vídeo e o funil inteiro. O que você faz com eles depois é com você.</p>
+    <p class="scarce">⚠ O grupo fecha antes do início da transmissão.</p>
+    <a class="cta" href="https://pay.kiwify.com.br/hkHDjkN" id="cta3">
+      Garantir vaga por R$19,90
+      <small>Pix ou cartão · acesso imediato</small>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:#93a8b8">Yan</strong> · Professor de inglês · Webinário ao vivo para professores</p>
+    <p style="margin-top:8px">Este conteúdo é educacional. Os valores citados são exemplos do que já foi alcançado e não constituem promessa ou garantia de resultado — os seus dependem da sua execução, do seu mercado e do seu esforço.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="cta" href="https://pay.kiwify.com.br/hkHDjkN" id="cta4">Garantir vaga · R$19,90</a>
+</div>
+
+<script>
+/* ---------- CONTAGEM REGRESSIVA ---------- */
+var alvo = new Date("2026-08-22T19:00:00-03:00").getTime();
+function tick(){
+  var falta = alvo - Date.now();
+  var el = {d:document.getElementById('d'),h:document.getElementById('h'),m:document.getElementById('m'),s:document.getElementById('s')};
+  if(falta <= 0){
+    el.d.textContent = el.h.textContent = el.m.textContent = el.s.textContent = "0";
+    document.querySelector('.topbar').innerHTML = "<b>A aula já começou</b> · entre no grupo para receber o link";
+    return;
+  }
+  var seg = Math.floor(falta/1000);
+  el.d.textContent = Math.floor(seg/86400);
+  el.h.textContent = String(Math.floor(seg%86400/3600)).padStart(2,'0');
+  el.m.textContent = String(Math.floor(seg%3600/60)).padStart(2,'0');
+  el.s.textContent = String(seg%60).padStart(2,'0');
+}
+tick(); setInterval(tick, 1000);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vaga confirmada · Entre no grupo</title>
+<meta name="robots" content="noindex">
+
+<!--
+  ============================================================
+  COMO USAR ESTA PÁGINA
+  ------------------------------------------------------------
+  1) Troque COLE_AQUI_O_LINK_DO_GRUPO pelo convite do seu grupo
+     de WhatsApp. Ele aparece em 2 lugares (botão e script).
+  2) Publique esta página numa URL sua, ex.: seusite.com/obrigado
+  3) Na Kiwify: Produto > Configurações > "Página de obrigado e
+     upsell" > habilitar > colar a URL desta página.
+  4) Se um dia o convite do grupo mudar, você troca só aqui —
+     nada precisa ser alterado dentro da Kiwify.
+  ============================================================
+-->
+
+<style>
+:root{
+  --bg:#080d14; --bg2:#0e1620; --card:#131d29; --line:#20303f;
+  --txt:#eaf2f8; --mut:#95a9b9; --acc:#22d3a5; --acc2:#7fe8cd;
+  --zap:#25D366; --warn:#ffc46b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg);color:var(--txt);min-height:100vh;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(800px 400px at 50% -60px, rgba(34,211,165,.16), transparent 70%);
+  display:flex;align-items:center;justify-content:center;padding:32px 20px;
+}
+.wrap{width:100%;max-width:560px}
+h1,h2,h3{line-height:1.2;letter-spacing:-.02em}
+
+/* ---- selo ---- */
+.check{
+  width:64px;height:64px;border-radius:50%;margin:0 auto 22px;
+  background:rgba(34,211,165,.14);border:1.5px solid var(--acc);
+  display:flex;align-items:center;justify-content:center;
+  animation:pop .5s cubic-bezier(.2,1.4,.4,1) both;
+}
+.check svg{width:30px;height:30px;stroke:var(--acc);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+@keyframes pop{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
+
+.head{text-align:center;margin-bottom:26px}
+.tagline{
+  display:inline-block;border:1px solid rgba(34,211,165,.4);color:var(--acc2);
+  border-radius:100px;padding:5px 13px;font-size:11.5px;font-weight:700;
+  letter-spacing:1.4px;text-transform:uppercase;margin-bottom:16px;
+}
+h1{font-size:clamp(26px,6.4vw,34px);font-weight:800;margin-bottom:12px}
+.sub{color:#c3d3de;font-size:16px}
+.sub strong{color:#fff}
+
+/* ---- passo obrigatório ---- */
+.now{
+  background:var(--card);border:1px solid rgba(37,211,102,.4);border-radius:16px;
+  padding:22px;margin-bottom:16px;text-align:center;
+}
+.now .kicker{font-size:11.5px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--zap);margin-bottom:8px}
+.now h2{font-size:19px;margin-bottom:8px}
+.now p{color:var(--mut);font-size:14.5px;margin-bottom:18px}
+
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--zap);color:#04231b;font-weight:800;font-size:17px;
+  padding:17px 20px;border-radius:12px;text-decoration:none;
+  box-shadow:0 10px 28px rgba(37,211,102,.24);
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(37,211,102,.32)}
+.btn svg{width:21px;height:21px;fill:#04231b}
+
+.auto{margin-top:14px;font-size:13px;color:var(--mut)}
+.auto b{color:var(--acc);font-variant-numeric:tabular-nums}
+.auto button{
+  background:none;border:none;color:var(--mut);text-decoration:underline;
+  cursor:pointer;font-size:13px;font-family:inherit;padding:0;margin-left:6px;
+}
+.auto button:hover{color:var(--txt)}
+
+/* ---- data ---- */
+.when{
+  background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:20px 22px;margin-bottom:16px;
+}
+.when-row{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.when-row div{font-size:13px;color:var(--mut)}
+.when-row b{display:block;color:var(--txt);font-size:15.5px;font-weight:700;margin-top:2px}
+.cal{
+  display:block;text-align:center;border:1px solid var(--line);border-radius:10px;
+  padding:12px;color:var(--acc2);text-decoration:none;font-size:14px;font-weight:700;
+}
+.cal:hover{border-color:var(--acc);background:rgba(34,211,165,.06)}
+
+/* ---- próximos passos ---- */
+.next{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:16px}
+.next h3{font-size:16px;margin-bottom:14px}
+.next ol{list-style:none;counter-reset:n}
+.next li{position:relative;padding-left:36px;margin-bottom:13px;font-size:14.5px;color:var(--mut)}
+.next li:last-child{margin-bottom:0}
+.next li:before{
+  counter-increment:n;content:counter(n);
+  position:absolute;left:0;top:1px;width:23px;height:23px;border-radius:50%;
+  background:rgba(34,211,165,.14);border:1px solid rgba(34,211,165,.5);color:var(--acc);
+  font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;
+}
+.next li b{color:var(--txt)}
+
+.warn{
+  background:rgba(255,196,107,.08);border-left:3px solid var(--warn);
+  border-radius:8px;padding:13px 15px;font-size:13.5px;color:#e8d3ac;margin-bottom:16px;
+}
+.foot{text-align:center;color:#6d8091;font-size:12.5px;line-height:1.7}
+.foot a{color:#93a8b8}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <div class="check">
+      <svg viewBox="0 0 24 24"><polyline points="4,12.5 9.5,18 20,6.5"/></svg>
+    </div>
+    <div class="tagline">Pagamento confirmado</div>
+    <h1>Sua vaga está garantida.</h1>
+    <p class="sub">Falta <strong>um passo</strong> — e ele leva dez segundos.</p>
+  </div>
+
+  <!-- ====== AÇÃO PRINCIPAL ====== -->
+  <div class="now">
+    <div class="kicker">Passo obrigatório</div>
+    <h2>Entre no grupo do WhatsApp</h2>
+    <p>É por lá que sai o link da transmissão, o lembrete no dia e o material de apoio. Quem não entra no grupo não recebe o link da aula.</p>
+
+    <a class="btn" href="COLE_AQUI_O_LINK_DO_GRUPO" id="zap" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.21-8.24 8.21zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+      Entrar no grupo agora
+    </a>
+
+    <div class="auto" id="autoBox">
+      Redirecionando em <b id="cnt">10</b>s
+      <button type="button" id="cancel">cancelar</button>
+    </div>
+  </div>
+
+  <!-- ====== DATA ====== -->
+  <div class="when">
+    <div class="when-row">
+      <div>Quando<b>Sáb, 22/08 · 19h</b></div>
+      <div>Onde<b>Ao vivo, pelo grupo</b></div>
+      <div>Duração<b>Cerca de 1h30</b></div>
+    </div>
+    <a class="cal" id="cal" href="#" target="_blank" rel="noopener">+ Adicionar ao meu calendário</a>
+  </div>
+
+  <!-- ====== PRÓXIMOS PASSOS ====== -->
+  <div class="next">
+    <h3>O que acontece a partir de agora</h3>
+    <ol>
+      <li><b>Entre no grupo</b> pelo botão acima — é o único canal oficial da turma.</li>
+      <li><b>Ative as notificações</b> do grupo para não perder o aviso do dia.</li>
+      <li><b>Sábado, 19h:</b> o link da transmissão é postado no grupo minutos antes.</li>
+      <li><b>Leve suas dúvidas.</b> Tem espaço para perguntas no final da aula.</li>
+    </ol>
+  </div>
+
+  <div class="warn">
+    <strong>Guarde esta página nos favoritos.</strong> Se por algum motivo você sair do grupo ou o link expirar, é aqui que você encontra o convite atualizado.
+  </div>
+
+  <div class="foot">
+    <p>Confirmação de compra e recibo foram enviados para o seu e-mail pela Kiwify.</p>
+    <p style="margin-top:6px">Problemas com o acesso? Responda o e-mail da compra que eu resolvo.</p>
+    <p style="margin-top:14px"><strong style="color:#93a8b8">Yan</strong> · Professor de inglês</p>
+  </div>
+
+</div>
+
+<script>
+/* ---------- LINK DO GRUPO ---------- */
+var GRUPO = "COLE_AQUI_O_LINK_DO_GRUPO";
+
+/* ---------- ADICIONAR AO CALENDÁRIO (Google) ---------- */
+/* 22/08/2026, 19h–20h30 horário de Brasília = 22:00–23:30 UTC */
+document.getElementById('cal').href =
+  "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+  "&text=" + encodeURIComponent("Webinário: renda extra no digital para professores") +
+  "&dates=20260822T220000Z/20260822T233000Z" +
+  "&details=" + encodeURIComponent("O link da transmissão será enviado no grupo do WhatsApp minutos antes do início.") +
+  "&ctz=America/Sao_Paulo";
+
+/* ---------- REDIRECIONAMENTO AUTOMÁTICO ---------- */
+var seg = 10, parado = false;
+var elCnt = document.getElementById('cnt');
+var elBox = document.getElementById('autoBox');
+
+document.getElementById('cancel').addEventListener('click', function(){
+  parado = true;
+  elBox.textContent = "Redirecionamento cancelado — use o botão acima quando quiser.";
+});
+
+var timer = setInterval(function(){
+  if (parado) { clearInterval(timer); return; }
+  seg--;
+  elCnt.textContent = seg;
+  if (seg <= 0) {
+    clearInterval(timer);
+    if (GRUPO.indexOf("COLE_AQUI") === -1) {
+      window.location.href = GRUPO;
+    } else {
+      elBox.textContent = "⚠ Link do grupo ainda não configurado nesta página.";
+    }
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
