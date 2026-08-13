@@ -180,6 +180,29 @@ footer p{color:#6d8091;font-size:12.5px}
   .wa-float .tip{display:none}
 }
 </style>
+
+<!-- ==================== META PIXEL ====================
+     Pixel: 625143213958251 (o mesmo do site do curso).
+     Os publicos sao separados por regra de URL no
+     Gerenciador de Eventos, nao por pixel.
+     ==================================================== -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '625143213958251');
+fbq('track', 'PageView');
+
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=625143213958251&ev=PageView&noscript=1"/></noscript>
+<!-- ================== FIM META PIXEL ================== -->
+
 </head>
 <body>
 
@@ -448,6 +471,19 @@ function tick(){
   el.s.textContent = String(seg%60).padStart(2,'0');
 }
 tick(); setInterval(tick, 1000);
+</script>
+
+
+<!-- ===== Pixel: InitiateCheckout ao clicar em qualquer botao de vaga ===== -->
+<script>
+(function(){
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href*="pay.kiwify.com.br"]');
+    if(a && typeof fbq === 'function'){
+      fbq('track','InitiateCheckout',{content_name:'Webinario 22-08', value:19.90, currency:'BRL'});
+    }
+  }, true);
+})();
 </script>
 
 </body>
